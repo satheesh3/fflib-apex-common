@@ -91,7 +91,7 @@ private with sharing class fflib_SObjectUnitOfWorkTest
 			pbe.UnitPrice = 10;
 			pbe.IsActive = true;
 			pbe.UseStandardPrice = false;
-			pbe.Pricebook2Id = Test.getStandardPricebookId();
+			pbe.Pricebook2Id = System.Test.getStandardPricebookId();
 			uow.registerNew(pbe, PricebookEntry.Product2Id, product);
 			OpportunityLineItem newOppLineItem = new OpportunityLineItem();
 			newOppLineItem.Quantity = 1;

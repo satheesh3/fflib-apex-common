@@ -55,7 +55,7 @@ private with sharing class fflib_SObjectSelectorTest
 		for(Account item : accountList)
 			idSet.add(item.Id);
 			
-		Test.startTest();		
+		System.Test.startTest();		
 		Testfflib_SObjectSelector selector = new Testfflib_SObjectSelector();
 		List<Account> result = (List<Account>) selector.selectSObjectsById(idSet);		
 		Test.stopTest();

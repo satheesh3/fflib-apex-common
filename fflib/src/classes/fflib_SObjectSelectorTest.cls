@@ -80,11 +80,11 @@ private with sharing class fflib_SObjectSelectorTest
 		for(Account item : accountList)
 			idSet.add(item.Id);
 			
-		Test.startTest();		
+		System.Test.startTest();		
 		Testfflib_SObjectSelector selector = new Testfflib_SObjectSelector();
 		Database.QueryLocator result = selector.queryLocatorById(idSet);		
 		System.Iterator<SObject> iteratorResult = result.iterator();
-		Test.stopTest();		
+		System.Test.stopTest();		
 
 		System.assert(true, iteratorResult.hasNext());
 		Account account = (Account) iteratorResult.next();
